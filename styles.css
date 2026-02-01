@@ -1896,3 +1896,40 @@ section {
         text-align: center;
     }
 }
+
+
+
+
+
+
+/* Jab screen 360px ya usse choti hogi, to ye settings apply hongi */
+@media (max-width: 360px) {
+    
+    /* Layout ko column mein kar dein taake cheezein ek ke niche ek aayein */
+    body, .container, .header, .footer {
+        width: 100% !important;
+        padding: 10px !important;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Images ko screen se bahar jane se rokne ke liye */
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    /* Text ka size thoda chota kar dein taake screen par pura aaye */
+    h1 {
+        font-size: 20px !important;
+    }
+    
+    p {
+        font-size: 14px !important;
+    }
+
+    /* Agar koi buttons hain to unki width full kar dein */
+    button, .btn {
+        width: 100% !important;
+    }
+}
