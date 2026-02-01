@@ -1933,3 +1933,45 @@ section {
         width: 100% !important;
     }
 }
+
+
+/* --- RESPONSIVE FIX FOR 360PX --- */
+@media (max-width: 360px) {
+    /* Hero section ko column mein set karne ke liye */
+    .hero, .hero-section, header {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        padding: 20px 10px !important;
+        height: auto !important;
+        width: 100% !important;
+        overflow: hidden !important;
+    }
+
+    /* Hero ki images ko screen ke andar rakhne ke liye */
+    .hero img, .hero-image, .hero-content img {
+        max-width: 100% !important;
+        height: auto !important;
+        margin: 10px 0 !important;
+    }
+
+    /* Text size adjust karne ke liye */
+    h1 {
+        font-size: 22px !important;
+        line-height: 1.2 !important;
+        word-wrap: break-word !important;
+    }
+
+    p {
+        font-size: 14px !important;
+        padding: 0 5px !important;
+    }
+
+    /* Kisi bhi cheez ko screen se bahar jane se rokne ke liye */
+    .container, section, div {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+}
