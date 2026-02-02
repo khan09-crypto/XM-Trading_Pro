@@ -2043,7 +2043,7 @@ section {
 }
 
 /* Chote mobile screens ke liye mazeed fix */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 360px) {
     .hero-title {
         font-size: 1.8rem !important;
     }
