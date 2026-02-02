@@ -1991,3 +1991,68 @@ section {
         max-width: 350px;
     }
 }
+
+
+/* --- Desktop to Mobile Grid Fix --- */
+
+@media screen and (max-width: 1024px) {
+    .hero-content {
+        /* Force single column layout */
+        grid-template-columns: 100% !important; 
+        display: flex !important;
+        flex-direction: column !important;
+        
+        text-align: center;
+        gap: 30px;
+        padding: 40px 15px;
+        max-width: 100vw;
+        overflow-x: hidden;
+    }
+
+    .hero-left, .hero-right {
+        width: 100% !important;
+        max-width: 100% !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Items center align honge */
+    }
+
+    /* Stats ko mobile par line mein lane ke liye */
+    .hero-stats {
+        display: flex !important;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .stat-item {
+        flex: 1 1 120px; /* Minimum size set kiya taake wrap ho sakein */
+    }
+
+    /* Buttons ko center aur full width karne ke liye */
+    .hero-buttons {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        min-width: 200px;
+    }
+}
+
+/* Chote mobile screens ke liye mazeed fix */
+@media screen and (max-width: 480px) {
+    .hero-title {
+        font-size: 1.8rem !important;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100% !important;
+    }
+}
