@@ -1938,7 +1938,7 @@ section {
 /* --- RESPONSIVE FIX FOR 360PX --- */
 @media (max-width: 360px) {
     /* Hero section ko column mein set karne ke liye */
-    .hero, .hero-section, header {
+    .hero-section, .hero-image, header {
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
