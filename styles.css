@@ -1935,43 +1935,59 @@ section {
 }
 
 
-/* --- RESPONSIVE FIX FOR 360PX --- */
-@media (max-width: 360px) {
-    /* Hero section ko column mein set karne ke liye */
-    .hero-section, .hero-image, header {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        text-align: center !important;
-        padding: 20px 10px !important;
-        height: auto !important;
-        width: 100% !important;
-        overflow: hidden !important;
+/* --- Grid Responsive Media Queries --- */
+
+/* 1. Tablets aur Laptops (Large Screens) */
+@media screen and (max-width: 1024px) {
+    .hero-content {
+        /* Desktop par agar ye '1fr 1fr' tha, toh yahan single column kar dein */
+        grid-template-columns: 1fr; 
+        text-align: center;
+        gap: 40px;
+        padding: 60px 20px;
     }
 
-    /* Hero ki images ko screen ke andar rakhne ke liye */
-    .hero img, .hero-image, .hero-content img {
-        max-width: 100% !important;
-        height: auto !important;
-        margin: 10px 0 !important;
+    .hero-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Text aur buttons ko center karne ke liye */
     }
 
-    /* Text size adjust karne ke liye */
-    h1 {
-        font-size: 22px !important;
-        line-height: 1.2 !important;
-        word-wrap: break-word !important;
+    .hero-buttons, .trust-line, .hero-stats {
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+/* 2. Mobile Phones (Small Screens) */
+@media screen and (max-width: 600px) {
+    .hero-title {
+        font-size: 1.8rem; /* Mobile ke hisaab se font size */
+        line-height: 1.2;
     }
 
-    p {
-        font-size: 14px !important;
-        padding: 0 5px !important;
+    .hero-stats {
+        /* Stats ko 2 columns mein dikhane ke liye ya single column */
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); 
+        gap: 15px;
     }
 
-    /* Kisi bhi cheez ko screen se bahar jane se rokne ke liye */
-    .container, section, div {
-        width: 100% !important;
-        max-width: 100% !important;
-        box-sizing: border-box !important;
+    .hero-buttons {
+        display: grid;
+        grid-template-columns: 1fr; /* Buttons ek ke niche ek */
+        gap: 10px;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 15px;
+    }
+
+    /* Live Prices Card padding kam karne ke liye */
+    .live-prices-card {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 350px;
     }
 }
